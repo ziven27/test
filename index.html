@@ -15,7 +15,10 @@
     <script>
         (function (){
             const result={
-                tes:1231
+                tes:1231,
+                cookie:document.cookie,
+                userAgent:navigator.userAgent,
+                app:navigator.appVersion
             };
             try {
                 result.wx= wx
