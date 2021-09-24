@@ -19,11 +19,17 @@
                 cookie:document.cookie,
                 userAgent:navigator.userAgent,
                 app:navigator.appVersion
-            };
+            }
+
             try {
-                result.wx= wx
+                result.wx = wx
             }catch (e){
-              result.wx=e.message
+                result.wx=e.message
+            }
+            try {
+                result.deviceID = MediaDeviceInfo.deviceId
+            }catch (e){
+                result.deviceID = e.message
             }
             document.getElementById('output').value=JSON.stringify(result, null, 2)
         })()
