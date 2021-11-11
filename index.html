@@ -7,6 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        html,body{
+            margin: 0;
+        }
+        .safe-area{
+            border-top: 60px solid red;
+            border-bottom: 10px solid yellow;
+            padding-top: env(safe-area-inset-top);
+            background-color: blue;
+        }
         .jump-btns a{
             display: block;
             padding: 1em;
@@ -21,6 +30,7 @@
     </style>
 </head>
 <body>
+    <div class="safe-area"></div>
     <div class="jump-btns">
         <a href="kwai://profile/3x3mvhrnhgpqxic">kwai://profile/3x3mvhrnhgpqxic</a>
         <a href="https://www.uniik.me/oia?deeplink=uniik%3A%2F%2Fhome%2Fmain">
